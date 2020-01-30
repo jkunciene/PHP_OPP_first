@@ -1,31 +1,16 @@
 <?php
 
 namespace OOP;
-class User
+abstract class User
 {
     protected $name;
     protected $email;
     protected $phone;
     protected $comment;
 
-    public function __construct($name, $email, $phone)
-    {
-        $this->name = $name;
-        $this->email = $email;
-        $this->phone = $phone;
+    abstract public function __construct($name, $email, $phone);
 
-    }
+    abstract public function profile();
 
-    public function profile(){
-        $data[]=$this->name;
-        $data[]=$this->email;
-        $data[]=$this->phone;
-        $data[]=$this->comment;
-
-        return $data;
-    }
-
-    public function setCommet($comment){
-        $this->comment=$comment;
-    }
+    abstract public function setCommet($comment);
 }
