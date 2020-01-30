@@ -1,15 +1,22 @@
 <?php
 require "vendor/autoload.php";
-use OOP\Teacher;
+use OOP\Mokytojai;
+use OOP\Mokiniai;
 
-$user2 = new Teacher('Petras', 'petras@gmail.com', '+37060579887', 'mokytojas');
-$user2->setCommet('hgdshgasl');
+$mokytojasM = new Mokytojai("Martynas", "Kasilionis", "nenusakomas", "vyriska", "WEB");
+$mokytojasM->setAtlygis("2500");
+$mokinysI = new Mokiniai("Irma", "Aite", "jauna", "moteriska", "9.5");
 ?>
 <ul>
-    <?php foreach ($user2->profile() as $value): ?>
+    <?php foreach ($mokytojasM->getProfile() as $value):?>
     <li><?=$value; ?></li>
-    <?php endforeach;?>
+    <?php endforeach;   ?>
+    <li><?=$mokytojasM->getAtlygis(); ?></li>
 </ul>
-
+<ul>
+    <?php foreach ($mokinysI->getProfile() as $value):?>
+    <li><?=$value; ?></li>
+    <?php endforeach;   ?>
+</ul>
 
 

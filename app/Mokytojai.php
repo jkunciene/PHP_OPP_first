@@ -6,6 +6,7 @@ namespace OOP;
 class Mokytojai extends Bendruomene
 {
     protected $destomasDalykas;
+    protected $atlyginimas;
 
     public function __construct($vardas, $pavarde, $amzius, $lytis, $destomasDalykas)
     {
@@ -24,5 +25,11 @@ class Mokytojai extends Bendruomene
         $data[] = $this->destomasDalykas;
 
         return $data;
+    }
+    public function setAtlygis($atlyginimas){
+        $this->atlyginimas = $atlyginimas;
+    }
+    public function getAtlygis(){
+        return $this->atlyginimas;
     }
 }
